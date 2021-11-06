@@ -1,7 +1,7 @@
 import requests
 from pyrogram import Client as Bot
 from pyrogram import idle
-from config import API_ID, API_HASH, BOT_TOKE
+from config import API_ID, API_HASH, BOT_TOKEN
 
 
 bot = Bot(
@@ -13,5 +13,5 @@ bot = Bot(
 )
 
 bot.start()
-run() 
-idle() 
+
+idle()

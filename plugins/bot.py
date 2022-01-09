@@ -3,8 +3,8 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 from pyrogram import Client
 from pyrogram import filters
-tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-medium")
-model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-medium")
+tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-large")
+model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-large")
 
 @Client.on_message(~filters.command("start"))
 async def getmessage(client, message):

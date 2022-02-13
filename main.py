@@ -27,7 +27,7 @@ app = FastAPI()
 @app.get("/chatbot/{query}")
 async def read_item(query : str):
     text= query
-    for step in range(100):
+    for step in range(1):
         new_user_input_ids = tokenizer.encode(text + tokenizer.eos_token, return_tensors='pt')
         # append the new user input tokens to the chat history
         bot_input_ids = torch.cat([chat_history_ids, new_user_input_ids], dim=-1) if step > 0 else new_user_input_ids

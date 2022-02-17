@@ -18,11 +18,16 @@
 from fastapi import FastAPI
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
+from fastapi.middleware.cors import CORSMiddleware
 
 tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-large")
 model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-large")
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    )
 
 @app.get("/chatbot/{query}")
 async def read_item(query : str):

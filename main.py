@@ -26,8 +26,8 @@ model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-large")
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_methods=["*"],
+    allow_origins=["http://localhost:3000","https://anurag131277.github.io/threejs-ai/"],
+    allow_methods=["GET","OPTIONS"],
     allow_headers=["*"],
     )
 

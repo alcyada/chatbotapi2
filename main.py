@@ -48,8 +48,8 @@ async def add_CORS_header(request: Request, call_next):
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000","https://anurag131277.github.io/threejs-ai/"],
-    allow_methods=["GET","OPTIONS"],
+    allow_origins=["*"],
+    allow_methods=["*"],
     allow_headers=["*"],
     )
 

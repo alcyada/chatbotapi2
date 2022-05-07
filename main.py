@@ -35,7 +35,7 @@ app.add_middleware(
 
 @app.options("/chatbot/{query}")
 async def read_i(query : str):
-   return {"query": success}
+   return {"query": "success"}
 @app.get("/chatbot/{query}")
 async def read_item(query : str):
     text= query
